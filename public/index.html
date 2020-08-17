@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="https://unpkg.com/bulma@latest/css/bulma.css">
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +23,113 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+  <title>React App</title>
+  <style>
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .counter {
+      padding: 10px;
+
+      .counter-controls {
+        display: inline-block;
+        margin-left: 10px;
+
+        button {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    ol.instructions {
+      list-style-type: decimal;
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+
+      li {
+        margin-bottom: 1rem;
+
+        ol {
+          margin-top: 0.5rem;
+          margin-left: 2.5rem;
+          list-style-type: decimal;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <section class="section">
+    <h1 class="title">React Interview Exercise</h1>
+    <p>
+      <strong>Instructions:</strong> Please complete this exercise
+      within 24 hours and email a completed code.
+    </p>
+    <p>
+      There are 2 components in this application:{' '}
+      <strong>Counter</strong> and <strong>App</strong>. The steps
+      below will take you through modifying and adding components to
+      change functionality and implementation.
+    </p>
+    <ol class="instructions">
+      <li>
+        <strong>`npm install && npm start`</strong> to run the project locally.
+      </li>
+      <li>
+        Update the project folder structure so that files/components are organised.
+      </li>
+      <li>
+        Update the Counter component to take{' '}
+        <code>onIncrement</code> and <code>onDecrement</code>{' '}
+        callbacks as props and ensure they update the counter's
+        values independently. Each callback should take a single,
+        integer value as a parameter which is the amount to
+        increment the counter's existing value by.{' '}
+      </li>
+      <li>
+        Move the global <code>data</code> array to the component
+        state for the <code>App</code> component.
+      </li>
+      <li>
+        Render a fourth <code>Counter</code> component and ensure
+        it's value is updated independently from the others.
+      </li>
+      <li>
+        Create a <code>Total</code> component, which should display
+        below the <code>Counter</code> components and always display
+        the running total of all the <code>Counter</code> values.
+      </li>
+      <li>
+        Make a copy of the <code>Counter</code> component, saving
+        the original so you're instructor can view it later. Then do
+        the following :
+        <ol>
+          <li>
+            remove the <code>onIncrement</code> and{' '}
+            <code>onDecrement</code> props from the (new)
+            <code>Counter</code> component
+          </li>
+          <li>
+            add a single <code>onChange</code> callback prop
+            that takes a single integer parameter &mdash; the
+            new value for the counter.
+          </li>
+          <li>
+            Ensure all <code>Counter</code> components still
+            update and function independently after this change.
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </section>
+  <section class="section">
     <div id="root"></div>
-    <!--
+  </section>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +139,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
